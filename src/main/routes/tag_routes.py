@@ -1,10 +1,18 @@
 from flask import Blueprint, request, jsonify
-
+from src.views.http_types.http_request import HttpRequest
+from src.views.tag_creator_view import TagCreatorView
 tags_routes_bp = Blueprint('tag_routes', __name__)
 
 @tags_routes_bp.route('/create_tag', methods=['POST'])
 def create_tags():
+    tag_creator_view = TagCreatorView()
     print("Creating tags...")
     # Logic to create tagsp
     print(request.json)
-    return jsonify({"message": "Tags created successfully"}), 201
+    http_request = HttpRequest(
+        # header=request.headers,
+        body=request.json,
+        # query_params=request.args
+    )
+    respose = tag_creator_view.validate_and_create(http_request)
+    return jsonify(respose.body), respose.status_code
