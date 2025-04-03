@@ -1,4 +1,7 @@
-# 📦 Barcode Generator API
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7d9b9968-2a13-4a0f-88d9-2fc8caeaade3" alt="Captura de tela 2025-04-03 090046" />
+</p>
+
 
 Uma API desenvolvida em **Python** para gerar códigos de barras em formato de imagem com base em códigos de produtos fornecidos. Utiliza o **Flask** para gerenciamento das rotas HTTP e a biblioteca `python-barcode` para criação dos códigos.
 
@@ -80,7 +83,6 @@ python run.py
 }
 ```
 
----
 
 ## ✅ Testes
 
@@ -98,6 +100,3 @@ Este projeto está licenciado sob a [MIT License](LICENSE).
 
 ---
 
-## ✨ Contribuições
-
-Contribuições são bem-vindas! Sinta-se livre para abrir issues ou pull requests.
